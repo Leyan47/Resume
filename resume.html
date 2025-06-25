@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>劉彥劭 | 極簡履歷</title>
+    <style>
+      :root {
+        --accent: #007acc;
+        --bg-light: #ffffff;
+        --bg-dark: #121212;
+        --text-light: #333333;
+        --text-dark: #f0f0f0;
+      }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: "Helvetica Neue", Arial, sans-serif;
+        line-height: 1.6;
+        max-width: 780px;
+        margin: 0 auto;
+        padding: 2rem 1rem;
+        background: var(--bg-light);
+        color: var(--text-light);
+      }
+      header {
+        margin-bottom: 2.5rem;
+      }
+      header h1 {
+        font-size: 2rem;
+        margin-bottom: 0.25rem;
+      }
+      header p.role {
+        font-size: 1.1rem;
+        color: var(--accent);
+        margin-bottom: 0.75rem;
+      }
+      header p.summary {
+        font-size: 1rem;
+        max-width: 40em;
+      }
+      h2 {
+        font-size: 1.4rem;
+        margin-bottom: 0.75rem;
+        border-bottom: 2px solid var(--accent);
+        display: inline-block;
+        padding-bottom: 0.25rem;
+      }
+      section {
+        margin-bottom: 2rem;
+      }
+      ul {
+        list-style: none;
+        padding-left: 0;
+      }
+      li {
+        margin-bottom: 0.5rem;
+        padding-left: 1rem;
+        position: relative;
+      }
+      li::before {
+        content: "•";
+        color: var(--accent);
+        position: absolute;
+        left: 0;
+      }
+      a {
+        color: var(--accent);
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+      footer {
+        text-align: center;
+        font-size: 0.9rem;
+        margin-top: 3rem;
+        color: #777;
+      }
+      @media (prefers-color-scheme: dark) {
+        body {
+          background: var(--bg-dark);
+          color: var(--text-dark);
+        }
+        footer {
+          color: #aaa;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>劉彥劭 (Liou Yan‑Shao)</h1>
+      <p class="role">Data Analyst & Statistician</p>
+      <p class="summary">
+        統計碩士，專長於資料分析、機器學習與自然語言處理。熟悉 R、Python、SQL
+        與 Git，曾參與多項金融及房地產領域的資料科學專案。
+      </p>
+    </header>
+
+    <section id="skills">
+      <h2>技能 Skills</h2>
+      <ul>
+        <li>Python (Pandas, Scikit‑learn, Dash)</li>
+        <li>R (Tidyverse, Shiny)</li>
+        <li>SQL (Microsoft SQL Server, PostgreSQL)</li>
+        <li>Git & GitHub 版本控制</li>
+        <li>機器學習 / NLP (BERT, LLM‑based RAG)</li>
+        <li>資料視覺化 (Matplotlib, ggplot2)</li>
+      </ul>
+    </section>
+
+    <section id="projects">
+      <h2>專案 Projects</h2>
+      <ul>
+        <li>
+          <a href="https://github.com/yourusername/multilabel-bert" target="_blank"
+            >多標籤文本分類 (BERT)</a
+          >
+        </li>
+        <li>
+          <a href="https://github.com/yourusername/house-viewing-analysis" target="_blank"
+            >房仲帶看數分析 Dash 應用</a
+          >
+        </li>
+        <li>
+          <a href="https://github.com/yourusername/rag-classifier" target="_blank"
+            >RAG LLM 分類器</a
+          >
+        </li>
+      </ul>
+    </section>
+
+    <footer>
+      聯絡: <a href="mailto:you@example.com">you@example.com</a> ·
+      <a href="https://www.linkedin.com/in/yourprofile" target="_blank">LinkedIn</a>
+    </footer>
+  </body>
+</html>
