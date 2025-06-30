@@ -28,73 +28,19 @@
       }
       header {
         margin-bottom: 2.5rem;
-        position: relative; /* 讓右上角小按鈕定位 */
       }
       header h1 {
         font-size: 2rem;
         margin-bottom: 0.25rem;
       }
-      /* --- 新增：角色列與右上角下載按鈕 --- */
-      .role-row {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-bottom: 0.75rem;
-      }
-      .role-row .role {
+      header p.role {
         font-size: 1.1rem;
         color: var(--accent);
+        margin-bottom: 0; /* 移除底部邊距 */
       }
-      .top-download {
-        background: var(--accent);
-        color: #ffffff;
-        display: inline-flex;
-        align-items: center;
-        font-size: 0.8rem;
-        padding: 0.25rem 0.6rem;
-        border-radius: 4px;
-        text-decoration: none;
-      }
-      .top-download img {
-        height: 0.9rem;
-        width: 0.9rem;
-        margin-left: 0.3rem;
-        filter: invert(1);
-      }
-      .top-download:hover {
-        opacity: 0.9;
-      }
-      /* ----------------------------------- */
       header p.summary {
         font-size: 1rem;
         max-width: 40em;
-      }
-      .download {
-        margin-top: 1rem;
-      }
-      .download a {
-        display: inline-flex;
-        align-items: center;
-        font-size: 0.95rem;
-        background: var(--accent);
-        color: white;
-        padding: 0.4rem 0.8rem;
-        border-radius: 4px;
-        text-decoration: none;
-      }
-      .download a:hover {
-        opacity: 0.9;
-      }
-      .download img {
-        height: 1rem;
-        width: 1rem;
-        margin-right: 0.4rem;
-      }
-      iframe {
-        width: 100%;
-        height: 600px;
-        border: none;
-        margin-top: 1.5rem;
       }
       h2 {
         font-size: 1.4rem;
@@ -143,42 +89,67 @@
           color: #aaa;
         }
       }
+
+      /* === 新增的 CSS 開始 === */
+
+      /* 這個容器用來將職稱和按鈕排在同一行 */
+      .header-row {
+        display: flex; /* 啟用 Flexbox */
+        justify-content: space-between; /* 將兩個項目推到容器的兩端 */
+        align-items: center; /* 垂直置中對齊 */
+        margin-bottom: 0.75rem; /* 將原本 p.role 的 margin-bottom 移到這裡，維持版面間距 */
+      }
+
+      /* 按鈕的樣式 */
+      .download-btn {
+        background-color: var(--accent);
+        color: white;
+        padding: 0.3rem 0.8rem;
+        border-radius: 5px;
+        font-size: 0.85rem;
+        text-decoration: none;
+        white-space: nowrap; /* 避免文字換行 */
+        transition: background-color 0.2s ease-in-out;
+      }
+
+      /* 按鈕滑鼠懸停時的效果 */
+      .download-btn:hover {
+        background-color: #005a9e; /* 一個稍暗的藍色 */
+        text-decoration: none;
+      }
+
+      /* === 新增的 CSS 結束 === */
     </style>
   </head>
   <body>
     <header>
-      <h1>劉彥劭<br>Liou Yan‑Shao</h1>
-      <!-- 新增：角色列 + 右上角小按鈕 -->
-      <div class="role-row">
+      <h1>劉彥劭<br />Liou Yan‑Shao</h1>
+      <!-- 1. 新增一個 div 來包住職稱和按鈕 -->
+      <div class="header-row">
         <p class="role">AI Application Engineer</p>
-        <a href="resume.pdf" class="top-download" target="_blank" download title="Download PDF">
-          PDF <img src="https://img.icons8.com/ios-glyphs/24/ffffff/download--v1.png" alt="download" />
-        </a>
+        <!-- 2. 新增下載按鈕 (記得替換 resume.pdf) -->
+        <a href="resume.pdf" class="download-btn" download>下載 PDF</a>
       </div>
-      <!-- ---- -->
       <p class="summary">
-        中央大學統計碩士，近期專注於自然語言處理、機器學習與資料分析等領域。熟悉 Python、R、MS SQL 與 Git，具備從資料探索、模型訓練與微調，到 AI 專案原型開發與驗證（POC）的完整經驗。
-        參與過多項應用開發，包括基於 RAG 架構的 LLM 分類器、對話串資訊萃取與顧客背景資訊補齊、以及 Dash KPI 分析工具，目前正持續與業務單位合作，推動實務應用導入。
+        中央大學統計碩士，近期專注於自然語言處理、機器學習與資料分析等領域。熟悉
+        Python、R、MS SQL 與 Git，具備從資料探索、模型訓練與微調，到 AI
+        專案原型開發與驗證（POC）的完整經驗。
+        參與過多項應用開發，包括基於 RAG 架構的 LLM
+        分類器、對話串資訊萃取與顧客背景資訊補齊、以及 Dash KPI
+        分析工具，目前正持續與業務單位合作，推動實務應用導入。
       </p>
-      <div class="download">
-        <a href="resume.pdf" target="_blank" download>
-          <img src="https://img.icons8.com/ios-glyphs/30/ffffff/download--v1.png" alt="download icon" />
-          下載 PDF 履歷
-        </a>
-      </div>
-      <iframe src="resume.pdf" title="PDF 預覽"></iframe>
     </header>
 
-<section id="education">
-  <h2>學歷 Education</h2>
-  <ul>
-    <li>國立中央大學 統計研究所碩士（2023）</li>
-    <li>國立中山大學 應用數學學士（2021）</li>
-    <li>國立中山大學 金融工程學程（2021）</li>
-  </ul>
-</section>
-    
-<section id="skills">
+    <section id="education">
+      <h2>學歷 Education</h2>
+      <ul>
+        <li>國立中央大學 統計研究所碩士（2023）</li>
+        <li>國立中山大學 應用數學學士（2021）</li>
+        <li>國立中山大學 金融工程學程（2021）</li>
+      </ul>
+    </section>
+
+    <section id="skills">
       <h2>技能 Skills</h2>
 
       <h4>AI 應用開發</h4>
@@ -217,24 +188,41 @@
       <h2>專案 Projects</h2>
       <ul>
         <li>
-          <a href="https://github.com/Leyan47/RAG-Lead-Classifier" target="_blank"
-            >RAG LLM 分類器</a>
-          </li>
-          <li>
-            <a href="https://github.com/yourusername/multilabel-bert" target="_blank"
-              >多標籤文本分類 (BERT)</a>
-          </li>
-          <li>
-            <a href="https://github.com/Leyan47/DashBoard" target="_blank"
-              >房仲業KPI趨勢分析 Dash 應用</a>
-          </li>
-          <li>
-            <a href="https://github.com/Leyan47/Online-Change-Point-Detection-for-Bimodal-Time-Series" target="_blank"
-              >碩士論文：基於Copula下的馬可夫鏈模型對於雙峰時間序列之在線變化點偵測</a>
-          </li>  
+          <a
+            href="https://github.com/Leyan47/RAG-Lead-Classifier"
+            target="_blank"
+            >RAG LLM 分類器</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://github.com/yourusername/multilabel-bert"
+            target="_blank"
+            >多標籤文本分類 (BERT)</a
+          >
+        </li>
+        <li>
+          <a href="https://github.com/Leyan47/DashBoard" target="_blank"
+            >房仲業KPI趨勢分析 Dash 應用</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://github.com/Leyan47/Online-Change-Point-Detection-for-Bimodal-Time-Series"
+            target="_blank"
+            >碩士論文：基於Copula下的馬可夫鏈模型對於雙峰時間序列之在線變化點偵測</a
+          >
+        </li>
       </ul>
     </section>
 
     <footer>
-      聯絡: <a href"mailto:qaq10025138@gmail.com">qaq10025138@gmail.com</a> ·
-      <a href="https://www.linkedin.com/in/%E5%BD%A5%E
+      聯絡: <a href="mailto:qaq10025138@gmail.com">qaq10025138@gmail.com</a> ·
+      <a
+        href="https://www.linkedin.com/in/%E5%BD%A5%E5%8A%AD-%E5%8A%89-705749282/"
+        target="_blank"
+        >LinkedIn</a
+      >
+    </footer>
+  </body>
+</html>
