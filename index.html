@@ -118,6 +118,29 @@
         text-decoration: none;
       }
 
+      /* === 工作經驗區塊樣式 === */
+      .job {
+        margin-bottom: 1.25rem;
+      }
+      .job h3 {
+        font-size: 1.05rem;
+        margin-bottom: 0.15rem;
+      }
+      .job-meta {
+        font-size: 0.95rem;
+        color: #666;
+        margin-bottom: 0.4rem;
+      }
+      .job ul {
+        margin-top: 0.4rem;
+      }
+      @media (prefers-color-scheme: dark) {
+        .job-meta {
+          color: #aaa;
+        }
+      }
+
+      
       /* === 新增的 CSS 結束 === */
     </style>
   </head>
@@ -148,6 +171,40 @@
         <li>國立中山大學 金融工程學程（2021）</li>
       </ul>
     </section>
+
+
+    <section id="experience">
+      <h2>工作經驗 Experience</h2>
+    
+      <article class="job">
+        <h3>AI工程師｜新堡科技股份有限公司</h3>
+        <p class="job-meta">2025/09 – 2025/12</p>
+        <ul>
+          <li>
+            參與文字轉語音 (TTS) 效能評估與優化，實作「預先合成＋前置流程快取化」（文字處理、音訊處理、聲學特徵抽取），降低線上推論延遲；並於多 GPU 環境實測 RTF 與整體延遲時間，協助主管評估不同硬體的成本效益。
+          </li>
+          <li>
+            系統整合內部 API 到客服 agent 系統：設計工具調用函式 (tool function) 及其說明文件 (tool spec)，讓 LLM 能理解工具可用參數與功能，支援自動調用工具取得結果後整合回傳前端；將處理後圖檔存入 NAS，並設定排程清理圖檔，維持儲存空間。
+          </li>
+          <li>
+            接續訓練公司 ASR 模型：透過 ctranslate2 量化模型以符合部署需求；導入 VAD 降低背景噪音與非語音片段對辨識結果的干擾，改善實際客服通話場景的穩定度；後續與多模型對比並設計單盲試驗給客服人員評分。
+          </li>
+          <li>協助既有 AI 服務日常維運。</li>
+        </ul>
+      </article>
+    
+      <article class="job">
+        <h3>數據分析師｜永慶房屋仲介股份有限公司</h3>
+        <p class="job-meta">2024/11 – 2025/08</p>
+        <ul>
+          <li>製作商業報表與互動式儀表板，支援營運決策。</li>
+          <li>
+            開發 BERT 文字多標籤分類模型與 RAG 文字資訊提取系統，成功將非結構化數據轉化為有價值的商業資產。
+          </li>
+        </ul>
+      </article>
+    </section>
+
 
     <section id="skills">
       <h2>技能 Skills</h2>
